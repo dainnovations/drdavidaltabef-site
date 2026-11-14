@@ -90,7 +90,7 @@ a { color: var(--blue-dark); }
   display: grid; grid-template-columns: 1.4fr 1fr; gap: 44px; align-items: center;
 }
 .hero-grid .portrait {
-  width: 100%; max-width: 360px; justify-self: end;
+  width: 100%; height: auto; max-width: 360px; justify-self: end;
   border-radius: 24px; border: 6px solid var(--white);
   box-shadow: 0 16px 40px rgba(71,99,124,0.18);
   display: block;
