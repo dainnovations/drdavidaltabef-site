@@ -57,7 +57,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Page-scoped flyer theme. Nav and footer keep the site theme. */
+  /* Page-scoped flyer theme. */
   .lw {
     --lw-bg: #F3F2E8;
     --lw-green: #5B7243;
@@ -85,6 +85,7 @@
     margin: 14px 0 36px;
   }
   .lw-art { display: block; width: 100%; height: auto; }
+  .lw-art + .lw-title { margin-top: 34px; }
 
   .lw-band { background: var(--lw-green); color: #fff; padding: 36px 40px 30px; }
   .lw-band p {
@@ -177,29 +178,40 @@
     .lw-details li { grid-template-columns: 1fr; gap: 0; }
     .lw-facts > div + div { border-left: 0; border-top: 1px solid rgba(255,255,255,0.28); }
   }
+
+  /* Co-led top bar (replaces the site nav on this page) */
+  .lw-cobar { position: static; background: #F3F2E8; backdrop-filter: none; border-bottom: 1px solid #D6D5C8; }
+  .lw-cobar-inner {
+    max-width: 900px; margin: 0 auto; padding: 12px 24px;
+    display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap;
+    font-family: "Nunito", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .lw-cobar a { color: #5D5F57; text-decoration: none; font-size: 0.92rem; font-weight: 600; letter-spacing: 0.01em; }
+  .lw-cobar a:hover { color: #4A5E36; text-decoration: underline; text-underline-offset: 3px; }
+  .lw-cobar .dot { color: #A5A698; }
+  .lw-bios .lw-site { margin-top: 6px; }
+  .lw-bios .lw-site a { color: #5B7243; font-weight: 700; font-size: 0.95rem; text-decoration: none; }
+  .lw-bios .lw-site a:hover { text-decoration: underline; }
+  @media (max-width: 680px) { .lw-cobar-inner { gap: 4px 10px; padding: 10px 16px; } }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="brand" href="/">David <span>Altabef</span></a>
-    <div class="nav-links">
-      <a href="/product-advisory">Product Advisory</a>
-      <a href="/coaching">Coaching</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-    </div>
+<nav class="lw-cobar" aria-label="Workshop leaders">
+  <div class="lw-cobar-inner">
+    <a href="https://www.joshrelin.com/" target="_blank" rel="noopener">Josh Relin, PsyD</a>
+    <span class="dot" aria-hidden="true">&middot;</span>
+    <a href="https://drdavidaltabef.com/">David Altabef, PhD</a>
   </div>
 </nav>
 
 <main class="lw">
   <div class="lw-wrap">
-    <h1 class="lw-title">Listening Skills for Men</h1>
-    <p class="lw-place">Northampton, MA</p>
-
     <img class="lw-art" src="assets/listening-bears.webp" width="1342" height="590"
          alt="Watercolor illustration of two bears talking in camp chairs beside a campfire at a lake at sunset">
+
+    <h1 class="lw-title">Listening Skills for Men</h1>
+    <p class="lw-place">Northampton, MA</p>
 
     <div class="lw-band">
       <p>A practical, 90-minute introductory workshop for guys who want better conversations and closer relationships.</p>
@@ -220,12 +232,14 @@
 
     <section class="lw-bios">
       <div>
-        <h3>David Altabef, PhD</h3>
-        <p>David Altabef, PhD, is a psychologist in Amherst specializing in men&rsquo;s work, adult ADHD, and relationship and communication skills.</p>
-      </div>
-      <div>
         <h3>Josh Relin, PsyD</h3>
         <p>Josh Relin, PsyD, is a psychologist in Northampton who has led men&rsquo;s groups and listening skills workshops for many years. He also consults with schools and advises faculty and administrators.</p>
+        <p class="lw-site"><a href="https://www.joshrelin.com/" target="_blank" rel="noopener">joshrelin.com &rarr;</a></p>
+      </div>
+      <div>
+        <h3>David Altabef, PhD</h3>
+        <p>David Altabef, PhD, is a psychologist in Amherst specializing in men&rsquo;s work, adult ADHD, and relationship and communication skills.</p>
+        <p class="lw-site"><a href="https://drdavidaltabef.com/">drdavidaltabef.com &rarr;</a></p>
       </div>
     </section>
   </div>
@@ -282,26 +296,6 @@
   </section>
 </main>
 
-<footer>
-  <div class="foot-inner">
-    <div>
-      <div class="brand" style="margin-bottom:8px">David <span style="color:var(--blue)">Altabef</span></div>
-      <p class="note">Psychologist · Product Advisor<br><br>
-      <a href="mailto:david@drdavidaltabef.com" style="color:inherit">david@drdavidaltabef.com</a> &nbsp;·&nbsp; (413) 461-0098<br>
-      &copy; 2026 David Altabef, PhD</p>
-    </div>
-    <div class="foot-links">
-      <a href="/product-advisory">Product Advisory</a>
-      <a href="/coaching">ADHD &amp; EF Coaching</a>
-      <a href="/therapy">Psychotherapy</a>
-      <a href="/workshops">Workshops &amp; Groups</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="https://www.psychologytoday.com/us/therapists/david-altabef-amherst-ma/362925" target="_blank" rel="noopener">Psychology Today</a>
-      <a href="https://www.linkedin.com/in/davidaltphd" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-</footer>
 
 <script>
 (function () {
