@@ -47,6 +47,12 @@ nav {
 }
 .nav-links a:hover { background: var(--blue-tint); color: var(--ink); }
 .nav-links a.active { background: var(--blue); color: #fff; }
+@media (max-width: 480px) {
+  .nav-inner { padding: 12px 16px; gap: 8px; }
+  .nav-links { gap: 2px; flex-wrap: nowrap; margin: 0 -8px; }
+  .nav-links a { font-size: 0.86rem; padding: 6px 9px; white-space: nowrap; }
+}
+@media (max-width: 360px) { .nav-links { flex-wrap: wrap; } }
 
 /* ---------- Page shells ---------- */
 .wrap { max-width: 860px; margin: 0 auto; padding: 60px 24px 84px; }
@@ -113,7 +119,7 @@ a { color: var(--blue-dark); }
 }
 .panel.tinted { background: var(--blue-tint); box-shadow: none; }
 .panel.sand { background: var(--cream-2); box-shadow: none; }
-.note { font-size: 0.85rem; color: #7A8894; }
+.note { font-size: 0.85rem; color: var(--ink-soft); }
 
 .quote-block {
   border-left: 3px solid var(--blue-mid); padding: 4px 0 4px 20px; margin: 26px 0;
@@ -129,7 +135,7 @@ a { color: var(--blue-dark); }
 }
 .offer-list .dot { color: var(--blue-mid); font-size: 1.1rem; }
 .offer-list .name { font-weight: 600; color: var(--ink); }
-.offer-list .gloss { font-size: 0.88rem; color: #7A8894; }
+.offer-list .gloss { font-size: 0.88rem; color: var(--ink-soft); }
 
 /* ---------- Forms ---------- */
 form { margin-top: 8px; }
@@ -141,6 +147,9 @@ input[type=text], input[type=email], select, textarea {
 input:focus, select:focus, textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; border-color: transparent; }
 .check-row { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: 0.95rem; color: var(--ink-soft); }
 .check-row input { accent-color: var(--blue); width: 17px; height: 17px; }
+
+/* Spam honeypot: hidden from people, visible to bots */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* ---------- Contact details ---------- */
 .contact-lines { list-style: none; margin: 0; }
@@ -231,4 +240,7 @@ footer .note { max-width: 460px; }
   padding: 8px 18px; transition: all .15s;
 }
 .quiet-row a:hover { color: var(--blue-dark); border-color: var(--blue-mid); }
+.quiet-row a { white-space: nowrap; }
+@media (max-width: 420px) { .quiet-row a { font-size: 0.82rem; padding: 8px 14px; } }
+@media (max-width: 360px) { .quiet-row a { white-space: normal; text-align: center; } }
 
