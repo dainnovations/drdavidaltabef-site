@@ -44,7 +44,7 @@
     "price": "48",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "url": "https://drdavidaltabef.com/listening#interested"
+    "url": "https://drdavidaltabef.com/listening#register"
   },
   "organizer": { "@type": "Person", "name": "David Altabef, PhD", "url": "https://drdavidaltabef.com/" },
   "performer": [
@@ -104,6 +104,26 @@
   .lw-facts .v { font-family: var(--lw-head); font-weight: 500; font-size: clamp(1.25rem, 2.8vw, 1.6rem); line-height: 1.25; margin: 4px 0 2px; color: #fff; }
   .lw-facts .s { font-size: 0.92rem; color: #fff; opacity: 0.92; }
 
+  .lw-reg-cta { text-align: center; margin-top: 22px; }
+  .lw-btn, a.lw-btn { display: inline-block; text-decoration: none; }
+  .lw-btn-lg { font-size: 1.2rem; padding: 16px 40px; }
+
+  .lw-register { background: var(--lw-green); color: #fff; padding: 52px 24px 56px; }
+  .lw-register-inner { max-width: 620px; margin: 0 auto; }
+  .lw-register h2 {
+    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem); color: #fff; margin-bottom: 14px;
+  }
+  .lw-register p { color: #fff; font-size: 1.08rem; line-height: 1.6; }
+  .lw-details { list-style: none; padding: 0; margin: 0 0 18px; }
+  .lw-details li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: baseline; color: #fff; font-size: 1.08rem; line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.25); }
+  .lw-details li:first-child { border-top: 1px solid rgba(255,255,255,0.25); }
+  .lw-details strong { font-family: var(--lw-head); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.88rem; opacity: 0.9; }
+  .lw-register .lw-btn { background: #fff; color: var(--lw-green-dark); margin-top: 10px; }
+  .lw-register .lw-btn:hover { background: var(--lw-bg); }
+  .lw-register .lw-fine { font-size: 0.95rem; opacity: 0.92; margin-top: 16px; }
+  .lw-register a:not(.lw-btn) { color: #fff; font-weight: 700; }
+
   .lw-skill { padding: 48px 0 8px; }
   .lw-skill h2 {
     display: flex; align-items: center; gap: 20px; text-transform: uppercase;
@@ -154,6 +174,7 @@
     .lw-band { padding: 28px 24px 24px; }
     .lw-bios { grid-template-columns: 1fr; gap: 28px; }
     .lw-facts { grid-template-columns: 1fr; }
+    .lw-details li { grid-template-columns: 1fr; gap: 0; }
     .lw-facts > div + div { border-left: 0; border-top: 1px solid rgba(255,255,255,0.28); }
   }
 </style>
@@ -190,6 +211,7 @@
       <div><p class="k">Where</p><p class="v">Center Street, Northampton</p><p class="s">Exact address given upon registration</p></div>
       <div><p class="k">Cost</p><p class="v">$48</p></div>
     </div>
+    <p class="lw-reg-cta"><a class="lw-btn lw-btn-lg" href="#register">Register</a></p>
 
     <section class="lw-skill">
       <h2>Listening is a skill you can build.</h2>
@@ -208,14 +230,29 @@
     </section>
   </div>
 
+  <section class="lw-register" id="register">
+    <div class="lw-register-inner">
+      <h2>Register</h2>
+      <ul class="lw-details">
+        <li><strong>When</strong> Saturday, December 5, 2026, 1:00&ndash;2:30 pm</li>
+        <li><strong>Where</strong> Center Street, Northampton (exact address on your confirmation)</li>
+        <li><strong>Cost</strong> $48 per person</li>
+        <li><strong>Size</strong> Up to 20 participants</li>
+      </ul>
+      <a class="lw-btn lw-btn-lg" href="https://buy.stripe.com/5kQ5kC2OH1vggsd2Fx4ko00">Register &amp; pay $48</a>
+      <p class="lw-fine">Payment is by credit card through Stripe. Full refund if you cancel at least 48 hours before the workshop.</p>
+      <p class="lw-fine">Questions? Email <a href="mailto:david@drdavidaltabef.com?subject=Listening%20Skills%20for%20Men">david@drdavidaltabef.com</a>.</p>
+    </div>
+  </section>
+
   <section class="lw-cta" id="interested">
     <div class="lw-cta-inner">
-      <h2>Interested?</h2>
-      <p class="lw-sub">Leave your name and email and we&rsquo;ll follow up with registration details and the exact address.</p>
+      <h2>Can&rsquo;t make December 5?</h2>
+      <p class="lw-sub">Leave your name and email and we&rsquo;ll let you know when we set future dates.</p>
 
       <form id="lw-form" action="https://formspree.io/f/mkoddrdn" method="POST">
-        <input type="hidden" name="_subject" value="Listening Skills for Men – Dec 5 registration">
-        <input type="hidden" name="workshop" value="Listening Skills for Men (Northampton, Sat Dec 5)">
+        <input type="hidden" name="_subject" value="Listening Skills for Men – future dates">
+        <input type="hidden" name="workshop" value="Listening Skills for Men (future dates)">
         <div class="lw-hp" aria-hidden="true">
           <label for="lw-gotcha">Leave this empty</label>
           <input type="text" id="lw-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -230,13 +267,13 @@
         <label for="lw-why">What brings you here? <span class="opt">(optional)</span></label>
         <textarea id="lw-why" name="message" rows="4" placeholder="A sentence or two about what you're hoping to get out of it."></textarea>
 
-        <button class="lw-btn" type="submit">Count me in</button>
+        <button class="lw-btn" type="submit">Keep me posted</button>
         <p class="lw-status" id="lw-status" role="status" aria-live="polite"></p>
       </form>
 
       <div class="lw-thanks" id="lw-thanks" hidden>
         <h3>Thanks, you&rsquo;re on the list.</h3>
-        <p>We&rsquo;ll be in touch soon with registration details and the exact address.</p>
+        <p>We&rsquo;ll let you know when we set future dates.</p>
       </div>
 
       <p class="lw-alt">Prefer email? Write to <a href="mailto:david@drdavidaltabef.com?subject=Listening%20Skills%20for%20Men">david@drdavidaltabef.com</a>.</p>
