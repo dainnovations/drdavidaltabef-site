@@ -15,7 +15,6 @@
 <meta property="og:image:height" content="525">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://drdavidaltabef.com/listening">
-<link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,182 +54,186 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Page-scoped flyer theme. */
-  .lw {
-    --lw-bg: #F3F2E8;
-    --lw-green: #5B7243;
-    --lw-green-dark: #4A5E36;
-    --lw-olive: #83963F;
-    --lw-ink: #22231F;
-    --lw-soft: #5D5F57;
-    --lw-line: #D6D5C8;
-    --lw-head: "Oswald", "Arial Narrow", Impact, sans-serif;
+  /* Self-contained page theme (this page does not load styles.css). */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FBF4E8; }
+  .lw, .lw-cobar {
+    --lw-paper: #FBF4E8;
+    --lw-card: #FDF9F0;
+    --lw-sand: #F1E7D2;
+    --lw-green: #46583C;
+    --lw-green-dark: #2F3D28;
+    --lw-ember: #9A4B24;
+    --lw-ink: #2E2B24;
+    --lw-ink-2: #3A372E;
+    --lw-soft: #4D483B;
+    --lw-mute: #5E5848;
+    --lw-line: #D9CFB8;
+    --lw-head: "Newsreader", Georgia, "Times New Roman", serif;
     --lw-body: "Nunito", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    background: var(--lw-bg);
-    color: var(--lw-ink);
     font-family: var(--lw-body);
+    color: var(--lw-ink);
   }
-  .lw-wrap { max-width: 900px; margin: 0 auto; padding: 56px 24px 0; }
-  .lw h1, .lw h2, .lw h3 { font-family: var(--lw-head); letter-spacing: 0.01em; }
+  .lw { background: var(--lw-paper); font-size: 18px; line-height: 1.7; }
+  :where(.lw) :where(h1, h2, h3, p, ul) { margin: 0; padding: 0; }
+  .lw h1, .lw h2, .lw h3 { font-family: var(--lw-head); font-weight: 400; }
+  .lw a { color: var(--lw-green); }
+  .lw a:hover { color: var(--lw-green-dark); }
 
-  .lw-title {
-    text-align: center; color: var(--lw-green); text-transform: uppercase;
-    font-weight: 500; font-size: clamp(2.3rem, 7.4vw, 4.6rem); line-height: 1.02;
+  /* Co-led top bar */
+  .lw-cobar {
+    display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 14px;
+    padding: 22px 24px 0; background: var(--lw-paper);
+    font-size: 15px; font-weight: 600; letter-spacing: 0.01em;
   }
-  .lw-place {
-    text-align: center; font-family: var(--lw-head); color: var(--lw-green);
-    letter-spacing: 0.3em; text-transform: uppercase; font-size: clamp(0.85rem, 2vw, 1.05rem);
-    margin: 14px 0 36px;
-  }
+  .lw-cobar a { color: var(--lw-mute); text-decoration: none; padding: 10px 4px; }
+  .lw-cobar a:hover { color: var(--lw-green-dark); text-decoration: underline; text-underline-offset: 4px; }
+  .lw-cobar .dot { color: #A39C88; }
+
+  /* Hero */
+  .lw-art-wrap { max-width: 1120px; margin: 0 auto; padding: clamp(16px, 3vw, 32px) 12px 0; }
   .lw-art { display: block; width: 100%; height: auto; }
-  .lw-art + .lw-title { margin-top: 34px; }
-
-  .lw-band { background: var(--lw-green); color: #fff; padding: 36px 40px 30px; }
-  .lw-band p {
-    color: #fff; font-family: var(--lw-head); font-weight: 400; font-size: clamp(1.35rem, 3.4vw, 2.05rem);
-    line-height: 1.3; letter-spacing: 0.03em;
+  .lw-hero { max-width: 1000px; margin: 0 auto; padding: clamp(20px, 3vw, 36px) 24px 0; text-align: center; }
+  .lw-title { font-size: clamp(2.6rem, 7vw, 5.25rem); line-height: 1.04; letter-spacing: -0.015em; color: var(--lw-green); }
+  .lw-place { margin-top: 22px; font-size: 14px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--lw-ember); }
+  .lw-squiggle { display: block; margin: 30px auto 0; }
+  .lw-lede {
+    margin: 30px auto 0; max-width: 680px; font-family: var(--lw-head); font-weight: 300;
+    font-size: clamp(1.3rem, 2.7vw, 1.75rem); line-height: 1.45; color: var(--lw-ink-2);
   }
-  .lw-band hr { width: 52px; border: 0; border-top: 1.5px solid rgba(255,255,255,0.75); margin-top: 18px; }
 
+  /* When / Where / Cost */
+  .lw-facts-wrap { max-width: 920px; margin: 0 auto; padding: clamp(28px, 4vw, 48px) 24px 0; }
   .lw-facts {
-    display: grid; grid-template-columns: 1fr 1.35fr 0.75fr; background: var(--lw-green-dark);
-    color: #fff; margin-top: 14px; text-align: center;
+    display: flex; flex-wrap: wrap; gap: 28px 40px; padding: 34px clamp(22px, 4vw, 44px);
+    border: 1.5px solid var(--lw-line); border-radius: 28px 22px 30px 20px / 22px 30px 20px 28px;
+    background: var(--lw-card); text-align: center;
   }
-  .lw-facts > div { padding: 20px 16px 18px; }
-  .lw-facts p { margin: 0; color: #fff; }
-  .lw-facts > div + div { border-left: 1px solid rgba(255,255,255,0.28); }
-  .lw-facts .k { font-family: var(--lw-head); letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.85rem; opacity: 0.85; }
-  .lw-facts .v { font-family: var(--lw-head); font-weight: 500; font-size: clamp(1.25rem, 2.8vw, 1.6rem); line-height: 1.25; margin: 4px 0 2px; color: #fff; }
-  .lw-facts .s { font-size: 0.92rem; color: #fff; opacity: 0.92; }
+  .lw-facts > div { flex: 1 1 180px; }
+  .lw-facts > div:nth-child(2) { flex: 1.4 1 240px; }
+  .lw-facts > div:nth-child(3) { flex: 0.7 1 120px; }
+  .lw-facts .k { font-size: 13px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lw-ember); }
+  .lw-facts .v { margin: 8px 0 2px; font-family: var(--lw-head); font-weight: 500; font-size: 1.5rem; line-height: 1.25; color: var(--lw-ink); }
+  .lw-facts .s { font-size: 16px; color: var(--lw-mute); }
+  .lw-reg-cta { margin-top: 34px; text-align: center; }
 
-  .lw-reg-cta { text-align: center; margin-top: 22px; }
-  .lw-btn, a.lw-btn { display: inline-block; text-decoration: none; }
-  .lw-btn-lg { font-size: 1.2rem; padding: 16px 40px; }
-
-  .lw-register { background: var(--lw-green); color: #fff; padding: 52px 24px 56px; }
-  .lw-register-inner { max-width: 620px; margin: 0 auto; }
-  .lw-register h2 {
-    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
-    font-size: clamp(1.6rem, 4vw, 2.1rem); color: #fff; margin-bottom: 14px;
+  /* Buttons */
+  .lw-btn, .lw a.lw-btn {
+    display: inline-block; background: var(--lw-green); color: var(--lw-paper); border: 0; cursor: pointer;
+    text-decoration: none; font-family: var(--lw-body); font-weight: 700; font-size: 18px; letter-spacing: 0.02em;
+    padding: 15px 44px; border-radius: 999px; transition: background .15s;
   }
-  .lw-register p { color: #fff; font-size: 1.08rem; line-height: 1.6; }
-  .lw-details { list-style: none; padding: 0; margin: 0 0 18px; }
-  .lw-details li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: baseline; color: #fff; font-size: 1.08rem; line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.25); }
-  .lw-details li:first-child { border-top: 1px solid rgba(255,255,255,0.25); }
-  .lw-details strong { font-family: var(--lw-head); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.88rem; opacity: 0.9; }
-  .lw-register .lw-btn { background: #fff; color: var(--lw-green-dark); margin-top: 10px; }
-  .lw-register .lw-btn:hover { background: var(--lw-bg); }
-  .lw-register .lw-fine { font-size: 0.95rem; opacity: 0.92; margin-top: 16px; }
-  .lw-register a:not(.lw-btn) { color: #fff; font-weight: 700; }
-
-  .lw-skill { padding: 48px 0 8px; }
-  .lw-skill h2 {
-    display: flex; align-items: center; gap: 20px; text-transform: uppercase;
-    font-weight: 500; font-size: clamp(1.6rem, 4vw, 2.3rem); color: var(--lw-ink); margin-bottom: 18px;
-  }
-  .lw-skill h2::after { content: ""; flex: 1; border-top: 1.5px solid #8A8B80; }
-  .lw-skill p { font-size: 1.15rem; line-height: 1.75; color: var(--lw-ink); }
-  .lw-skill .lw-dates { color: var(--lw-green); font-weight: 600; margin-top: 18px; font-size: 1.08rem; }
-
-  .lw-bios {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-    border-top: 1px solid var(--lw-line); margin-top: 40px; padding: 36px 0 56px;
-  }
-  .lw-bios h3 { color: var(--lw-green); font-weight: 500; font-size: 1.55rem; margin-bottom: 8px; }
-  .lw-bios p { color: var(--lw-soft); font-size: 1rem; line-height: 1.7; }
-
-  .lw-cta { background: var(--lw-olive); color: #fff; padding: 52px 24px 60px; }
-  .lw-cta-inner { max-width: 620px; margin: 0 auto; }
-  .lw-cta p { color: #fff; }
-  .lw-cta h2 {
-    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
-    font-size: clamp(1.6rem, 4vw, 2.1rem); color: #fff;
-  }
-  .lw-cta .lw-sub { font-size: 1.08rem; margin: 6px 0 4px; }
-  .lw form { margin-top: 10px; }
-  .lw label { color: #fff; font-family: var(--lw-body); font-weight: 700; font-size: 0.9rem; }
-  .lw label .opt { font-weight: 400; opacity: 0.85; }
-  .lw input[type=text], .lw input[type=email], .lw textarea {
-    border: 1px solid transparent; border-radius: 6px; font-family: var(--lw-body); font-size: 1rem;
-  }
-  .lw input:focus, .lw textarea:focus { outline: 3px solid #fff; outline-offset: 1px; }
-  .lw-btn {
-    margin-top: 22px; background: var(--lw-green-dark); color: #fff; border: 0; cursor: pointer;
-    font-family: var(--lw-head); text-transform: uppercase; letter-spacing: 0.12em;
-    font-size: 1.1rem; padding: 14px 34px; border-radius: 4px; transition: background .15s;
-  }
-  .lw-btn:hover { background: #3C4D2C; }
+  .lw-btn:hover, .lw a.lw-btn:hover { background: var(--lw-green-dark); color: var(--lw-paper); }
   .lw-btn:disabled { opacity: 0.7; cursor: default; }
+  .lw-btn:focus-visible { outline: 2px solid var(--lw-green-dark); outline-offset: 3px; }
+
+  /* Listening is a skill */
+  .lw-skill { max-width: 680px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px 0; }
+  .lw-skill h2 { margin-bottom: 24px; font-size: clamp(1.9rem, 4.4vw, 2.75rem); line-height: 1.15; letter-spacing: -0.01em; color: var(--lw-ink); }
+  .lw-skill p { font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.8; color: var(--lw-ink-2); }
+
+  /* Bios */
+  .lw-bios-wrap { max-width: 920px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px 0; }
+  .lw-bios-wrap .lw-squiggle { margin: 0 auto clamp(40px, 6vw, 64px); }
+  .lw-bios { display: flex; flex-wrap: wrap; gap: 44px 64px; }
+  .lw-bios > div { flex: 1 1 300px; }
+  .lw-bios h3 { margin-bottom: 10px; font-weight: 500; font-size: 1.6rem; line-height: 1.2; color: var(--lw-green); }
+  .lw-bios p { font-size: 17px; line-height: 1.75; color: var(--lw-soft); }
+  .lw-bios .lw-site { margin-top: 14px; }
+  .lw-bios .lw-site a {
+    display: inline-block; padding: 10px 0; font-weight: 700; font-size: 16px;
+    text-decoration: underline; text-decoration-color: #B9C2A8; text-underline-offset: 5px;
+  }
+
+  /* Register panel */
+  .lw-register { max-width: 1040px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 16px 0; }
+  .lw-panel { padding: clamp(40px, 7vw, 80px) clamp(24px, 6vw, 72px); }
+  .lw-panel-inner { max-width: 620px; margin: 0 auto; }
+  .lw-register .lw-panel { background: var(--lw-green); color: var(--lw-paper); border-radius: 40px 30px 44px 32px / 32px 44px 30px 40px; }
+  .lw-register h2 { margin-bottom: 28px; font-size: clamp(2rem, 4.6vw, 2.9rem); line-height: 1.1; color: var(--lw-paper); }
+  .lw-details { list-style: none; margin-bottom: 32px; border-bottom: 1px solid rgba(251,244,232,0.28); }
+  .lw-details li {
+    display: flex; flex-wrap: wrap; gap: 2px 20px; align-items: baseline; padding: 14px 0;
+    border-top: 1px solid rgba(251,244,232,0.28); font-size: 18px; line-height: 1.6;
+  }
+  .lw-details strong { flex: 0 0 84px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E4DCC4; }
+  .lw-details span { flex: 1 1 240px; }
+  .lw-register .lw-btn, .lw-register a.lw-btn { background: var(--lw-paper); color: var(--lw-green-dark); padding: 16px 40px; }
+  .lw-register .lw-btn:hover, .lw-register a.lw-btn:hover { background: #fff; color: var(--lw-green-dark); }
+  .lw-register .lw-btn:focus-visible { outline-color: var(--lw-paper); }
+  .lw-register .lw-fine { margin-top: 14px; font-size: 16px; line-height: 1.7; color: #F1EAD8; }
+  .lw-register .lw-btn + .lw-fine { margin-top: 28px; }
+  .lw-register .lw-fine strong { color: var(--lw-paper); }
+  .lw-register a:not(.lw-btn), .lw-register a:not(.lw-btn):hover { color: var(--lw-paper); font-weight: 700; text-underline-offset: 4px; }
+
+  /* Future dates panel */
+  .lw-cta { max-width: 1040px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 16px clamp(72px, 10vw, 120px); }
+  .lw-cta .lw-panel { background: var(--lw-sand); border-radius: 32px 42px 30px 44px / 44px 30px 42px 32px; }
+  .lw-cta h2 { margin-bottom: 12px; font-size: clamp(1.9rem, 4.4vw, 2.6rem); line-height: 1.15; color: var(--lw-ink); }
+  .lw-cta .lw-sub { margin-bottom: 10px; font-size: 18px; color: var(--lw-soft); }
+  .lw form { margin: 0; }
+  .lw label { display: block; margin: 22px 0 8px; font-weight: 700; font-size: 15px; color: var(--lw-ink-2); }
+  .lw label .opt { font-weight: 400; color: var(--lw-mute); }
+  .lw input[type=text], .lw input[type=email], .lw textarea {
+    display: block; width: 100%; font-family: var(--lw-body); font-size: 17px; line-height: 1.6; color: var(--lw-ink);
+    background: var(--lw-card); border: 1.5px solid #CFC4A9; border-radius: 12px; padding: 12px 16px;
+  }
+  .lw textarea { resize: vertical; }
+  .lw input:focus, .lw textarea:focus { outline: 2px solid var(--lw-green); outline-offset: 2px; }
+  .lw ::placeholder { color: #756F60; opacity: 1; }
+  .lw form .lw-btn { margin-top: 26px; padding: 15px 40px; }
   .lw-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .lw-alt { margin-top: 26px; font-size: 0.98rem; }
-  .lw-alt a { color: #fff; font-weight: 700; }
-  .lw-status { margin-top: 18px; font-weight: 700; }
-  .lw-thanks { background: rgba(255,255,255,0.14); border-radius: 8px; padding: 22px 24px; margin-top: 18px; }
-  .lw-thanks h3 { font-size: 1.5rem; font-weight: 500; color: #fff; margin-bottom: 6px; }
-
-  @media (max-width: 680px) {
-    .lw-wrap { padding-top: 40px; }
-    .lw-band { padding: 28px 24px 24px; }
-    .lw-bios { grid-template-columns: 1fr; gap: 28px; }
-    .lw-facts { grid-template-columns: 1fr; }
-    .lw-details li { grid-template-columns: 1fr; gap: 0; }
-    .lw-facts > div + div { border-left: 0; border-top: 1px solid rgba(255,255,255,0.28); }
-  }
-
-  /* Co-led top bar (replaces the site nav on this page) */
-  .lw-cobar { position: static; background: #F3F2E8; backdrop-filter: none; border-bottom: 1px solid #D6D5C8; }
-  .lw-cobar-inner {
-    max-width: 900px; margin: 0 auto; padding: 12px 24px;
-    display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap;
-    font-family: "Nunito", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  }
-  .lw-cobar a { color: #5D5F57; text-decoration: none; font-size: 0.92rem; font-weight: 600; letter-spacing: 0.01em; }
-  .lw-cobar a:hover { color: #4A5E36; text-decoration: underline; text-underline-offset: 3px; }
-  .lw-cobar .dot { color: #A5A698; }
-  .lw-bios .lw-site { margin-top: 6px; }
-  .lw-bios .lw-site a { color: #5B7243; font-weight: 700; font-size: 0.95rem; text-decoration: none; }
-  .lw-bios .lw-site a:hover { text-decoration: underline; }
-  @media (max-width: 680px) { .lw-cobar-inner { gap: 4px 10px; padding: 10px 16px; } }
+  .lw-status { margin-top: 16px; font-weight: 700; color: var(--lw-ink-2); }
+  .lw-status:empty { display: none; }
+  .lw-thanks { background: var(--lw-card); border: 1.5px solid var(--lw-line); border-radius: 18px; padding: 24px 26px; margin-top: 22px; }
+  .lw-thanks h3 { font-weight: 500; font-size: 1.5rem; line-height: 1.25; color: var(--lw-green); margin-bottom: 6px; }
+  .lw-thanks p { color: var(--lw-soft); }
+  .lw-alt { margin-top: 32px; font-size: 16px; color: var(--lw-soft); }
+  .lw-alt a { font-weight: 700; text-underline-offset: 4px; }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 
 <nav class="lw-cobar" aria-label="Workshop leaders">
-  <div class="lw-cobar-inner">
-    <a href="https://www.joshrelin.com/" target="_blank" rel="noopener">Josh Relin, PsyD</a>
-    <span class="dot" aria-hidden="true">&middot;</span>
-    <a href="https://drdavidaltabef.com/">David Altabef, PhD</a>
-  </div>
+  <a href="https://www.joshrelin.com/" target="_blank" rel="noopener">Josh Relin, PsyD</a>
+  <span class="dot" aria-hidden="true">&middot;</span>
+  <a href="https://drdavidaltabef.com/">David Altabef, PhD</a>
 </nav>
 
 <main class="lw">
-  <div class="lw-wrap">
+  <div class="lw-art-wrap">
     <img class="lw-art" src="assets/listening-bears.webp" width="1342" height="590"
          alt="Watercolor illustration of two bears talking in camp chairs beside a campfire at a lake at sunset">
+  </div>
 
+  <header class="lw-hero">
     <h1 class="lw-title">Listening Skills for Men</h1>
     <p class="lw-place">Northampton, MA</p>
+    <svg class="lw-squiggle" aria-hidden="true" width="120" height="14" viewBox="0 0 120 14" fill="none"><path d="M2 8c9-6 17-6 26 0s17 6 26 0 17-6 26 0 17 6 26 0 9-4 12-4" stroke="#C9BFA6" stroke-width="2" stroke-linecap="round"/></svg>
+    <p class="lw-lede">A practical, 90-minute introductory workshop for guys who want better conversations and closer relationships.</p>
+  </header>
 
-    <div class="lw-band">
-      <p>A practical, 90-minute introductory workshop for guys who want better conversations and closer relationships.</p>
-      <hr>
-    </div>
-
+  <div class="lw-facts-wrap">
     <div class="lw-facts">
       <div><p class="k">When</p><p class="v">Saturday, Dec 5</p><p class="s">1:00&ndash;2:30 pm</p></div>
-      <div><p class="k">Where</p><p class="v">Center Street, Northampton</p><p class="s">Exact address given upon registration</p></div>
+      <div><p class="k">Where</p><p class="v">Center Street, Northampton</p><p class="s">Workshop address will be given upon registration</p></div>
       <div><p class="k">Cost</p><p class="v">$48</p></div>
     </div>
-    <p class="lw-reg-cta"><a class="lw-btn lw-btn-lg" href="#register">Register</a></p>
+    <p class="lw-reg-cta"><a class="lw-btn" href="#register">Register</a></p>
+  </div>
 
-    <section class="lw-skill">
-      <h2>Listening is a skill you can build.</h2>
-      <p>Want to have less conflict in your relationships? Get better at making the people you care about feel heard and understood? This workshop will help you gain skills to improve your relationships with partners, friends, family or coworkers.</p>
-    </section>
+  <section class="lw-skill">
+    <h2>Listening is a skill you can build.</h2>
+    <p>Want to have less conflict in your relationships? Get better at making the people you care about feel heard and understood? This workshop will help you gain skills to improve your relationships with partners, friends, family or coworkers.</p>
+  </section>
 
-    <section class="lw-bios">
+  <section class="lw-bios-wrap">
+    <svg class="lw-squiggle" aria-hidden="true" width="120" height="14" viewBox="0 0 120 14" fill="none"><path d="M2 8c9-6 17-6 26 0s17 6 26 0 17-6 26 0 17 6 26 0 9-4 12-4" stroke="#C9BFA6" stroke-width="2" stroke-linecap="round"/></svg>
+    <div class="lw-bios">
       <div>
         <h3>Josh Relin, PsyD</h3>
         <p>Josh Relin, PsyD, is a psychologist in Northampton who has led men&rsquo;s groups and listening skills workshops for many years. He also consults with schools and advises faculty and administrators.</p>
@@ -241,57 +244,61 @@
         <p>David Altabef, PhD, is a psychologist in Amherst specializing in men&rsquo;s work, adult ADHD, and relationship and communication skills.</p>
         <p class="lw-site"><a href="https://drdavidaltabef.com/">drdavidaltabef.com &rarr;</a></p>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <section class="lw-register" id="register">
-    <div class="lw-register-inner">
-      <h2>Register</h2>
-      <ul class="lw-details">
-        <li><strong>When</strong> Saturday, December 5, 2026, 1:00&ndash;2:30 pm</li>
-        <li><strong>Where</strong> Center Street, Northampton (exact address on your confirmation)</li>
-        <li><strong>Cost</strong> $48 per person</li>
-        <li><strong>Size</strong> Up to 20 participants</li>
-      </ul>
-      <a class="lw-btn lw-btn-lg" href="https://buy.stripe.com/5kQ5kC2OH1vggsd2Fx4ko00">Register &amp; pay $48</a>
-      <p class="lw-fine">Payment is by credit card through Stripe.</p>
-      <p class="lw-fine"><strong>Cancellations:</strong> We ask that you do your best to commit to attending the workshop. If you need to cancel, refunds can be given up until 48 hours before the workshop.</p>
-      <p class="lw-fine">Questions? Email <a href="mailto:david@drdavidaltabef.com?subject=Listening%20Skills%20for%20Men">david@drdavidaltabef.com</a>.</p>
+    <div class="lw-panel">
+      <div class="lw-panel-inner">
+        <h2>Register</h2>
+        <ul class="lw-details">
+          <li><strong>When</strong> <span>Saturday, December 5, 2026, 1:00&ndash;2:30 pm</span></li>
+          <li><strong>Where</strong> <span>Center Street, Northampton (exact address on your confirmation)</span></li>
+          <li><strong>Cost</strong> <span>$48 per person</span></li>
+          <li><strong>Size</strong> <span>Up to 20 participants</span></li>
+        </ul>
+        <a class="lw-btn" href="https://buy.stripe.com/5kQ5kC2OH1vggsd2Fx4ko00">Register &amp; pay $48</a>
+        <p class="lw-fine">Payment is by credit card through Stripe.</p>
+        <p class="lw-fine"><strong>Cancellations:</strong> We ask that you do your best to commit to attending the workshop. If you need to cancel, refunds can be given up until 48 hours before the workshop.</p>
+        <p class="lw-fine">Questions? Email <a href="mailto:david@drdavidaltabef.com?subject=Listening%20Skills%20for%20Men">david@drdavidaltabef.com</a>.</p>
+      </div>
     </div>
   </section>
 
   <section class="lw-cta" id="interested">
-    <div class="lw-cta-inner">
-      <h2>Can&rsquo;t make December 5?</h2>
-      <p class="lw-sub">Leave your name and email and we&rsquo;ll let you know when we set future dates.</p>
+    <div class="lw-panel">
+      <div class="lw-panel-inner">
+        <h2>Can&rsquo;t make December 5?</h2>
+        <p class="lw-sub">Leave your name and email and we&rsquo;ll let you know when we set future dates.</p>
 
-      <form id="lw-form" action="https://formspree.io/f/mkoddrdn" method="POST">
-        <input type="hidden" name="_subject" value="Listening Skills for Men – future dates">
-        <input type="hidden" name="workshop" value="Listening Skills for Men (future dates)">
-        <div class="lw-hp" aria-hidden="true">
-          <label for="lw-gotcha">Leave this empty</label>
-          <input type="text" id="lw-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        <form id="lw-form" action="https://formspree.io/f/mkoddrdn" method="POST">
+          <input type="hidden" name="_subject" value="Listening Skills for Men – future dates">
+          <input type="hidden" name="workshop" value="Listening Skills for Men (future dates)">
+          <div class="lw-hp" aria-hidden="true">
+            <label for="lw-gotcha">Leave this empty</label>
+            <input type="text" id="lw-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <label for="lw-name">Name</label>
+          <input type="text" id="lw-name" name="name" autocomplete="name" required>
+
+          <label for="lw-email">Email</label>
+          <input type="email" id="lw-email" name="email" autocomplete="email" required>
+
+          <label for="lw-why">What brings you here? <span class="opt">(optional)</span></label>
+          <textarea id="lw-why" name="message" rows="4" placeholder="A sentence or two about what you're hoping to get out of it."></textarea>
+
+          <button class="lw-btn" type="submit">Keep me posted</button>
+          <p class="lw-status" id="lw-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="lw-thanks" id="lw-thanks" hidden>
+          <h3>Thanks, you&rsquo;re on the list.</h3>
+          <p>We&rsquo;ll let you know when we set future dates.</p>
         </div>
 
-        <label for="lw-name">Name</label>
-        <input type="text" id="lw-name" name="name" autocomplete="name" required>
-
-        <label for="lw-email">Email</label>
-        <input type="email" id="lw-email" name="email" autocomplete="email" required>
-
-        <label for="lw-why">What brings you here? <span class="opt">(optional)</span></label>
-        <textarea id="lw-why" name="message" rows="4" placeholder="A sentence or two about what you're hoping to get out of it."></textarea>
-
-        <button class="lw-btn" type="submit">Keep me posted</button>
-        <p class="lw-status" id="lw-status" role="status" aria-live="polite"></p>
-      </form>
-
-      <div class="lw-thanks" id="lw-thanks" hidden>
-        <h3>Thanks, you&rsquo;re on the list.</h3>
-        <p>We&rsquo;ll let you know when we set future dates.</p>
+        <p class="lw-alt">Prefer email? Write to <a href="mailto:david@drdavidaltabef.com?subject=Listening%20Skills%20for%20Men">david@drdavidaltabef.com</a>.</p>
       </div>
-
-      <p class="lw-alt">Prefer email? Write to <a href="mailto:david@drdavidaltabef.com?subject=Listening%20Skills%20for%20Men">david@drdavidaltabef.com</a>.</p>
     </div>
   </section>
 </main>
